@@ -17,18 +17,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <h2>Prediction</h2> 
+                    <h1 class="text-primary">Prediction</h1> 
                         
                     <div class="row">
 
                       <div class="col-sm">
-                        <h1>Fashion Tag <span class="btn btn-lg btn-primary">{{product}}</span></h1>
+                        <h2>Product type <span class="btn btn-lg btn-primary">{{product}}</span></h2>
                       </div>
 
                       <div class="col-sm">
                         <span class="border border-primary">
                           <img src="{{ user_image }}" alt="{{ user_image }}" class="img-fluid" width="75%" height="75%">
                         </span>
+                      </div>
+
+                      <div class="col-sm">
+                        <input type="button" class="btn btn-lg btn-info" value="Go back!" onclick="history.back()">
                       </div>
 
                     </div>
