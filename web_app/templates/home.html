@@ -1,24 +1,62 @@
-<html>
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Upload Image</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>File Upload</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <link rel="stylesheet" href="css/form.css" > -->
+        <!-- <script src="js/form.js"></script> -->
+    </head>
+    <body >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2>Choose an image</h2> 
+                    <p> The allowed extensions: png, jpg, jpeg </p>
+                    <form role="form" method="post" action = "/predict" id="reused_form" enctype="multipart/form-data">
+                        <!-- <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Email:</label>
+                                <input type="text" class="form-control" id="email" name="email" maxlength="50">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Phone:</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required maxlength="50">
+                            </div>
+                        </div> -->
+                        
+                        <!-- <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="name"> Message:</label>
+                                <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Your Message Here" maxlength="6000" rows="7"></textarea>
+                            </div>
+                        </div> -->
 
 
-
-    <div class="col-sm">
-      <h1><span class="badge badge-danger">Product Prediction</span></h1>
-    </div>
-
-    <div class="col-sm">
-      <form action = "/predict" method = "post" enctype="multipart/form-data">
-          <input type="file" name="file" />
-          <input type = "submit" value="Upload">
-      </form>
-    </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <!-- <label for="name"> Choose an image:</label> -->
+                                <input type="file" name="file" class="btn btn-lg btn-success btn-block"  required />
+                            </div>
+                        </div>
 
 
-
-</body>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-primary btn-block" id="btnContactUs"> Submit </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>...</h3> </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3>...</div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
